@@ -22,7 +22,7 @@ public class SearchResultsPage {
     public boolean resultsAreDisplayed() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
-            // Ожидаем хотя бы одно изображение товара с классом rtimg
+
             By resultImage = By.cssSelector("img.rtimg");
 
             wait.until(ExpectedConditions.visibilityOfElementLocated(resultImage));

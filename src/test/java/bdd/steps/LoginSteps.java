@@ -25,7 +25,6 @@ public class LoginSteps {
 
     @Then("I should be logged in")
     public void validateLogin() {
-        // Здесь можно добавить проверку на успешный вход
         driver.quit();
     }
 }

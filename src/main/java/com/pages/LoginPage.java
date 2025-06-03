@@ -15,10 +15,10 @@ public class LoginPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    // Если у тебя есть отдельный метод для открытия формы логина — добавь сюда
+
     public void openLoginForm() {
-        // Если логин открывается кликом на accountLink, то возможно:
-        driver.get("https://www.wiggle.com/login"); // прямой URL на страницу логина
+
+        driver.get("https://www.wiggle.com/login");
     }
 
     public void login(String email, String password) {

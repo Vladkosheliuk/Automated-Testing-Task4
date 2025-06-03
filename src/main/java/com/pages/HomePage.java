@@ -41,15 +41,10 @@ public class HomePage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         try {
-            // Ждём появления кнопки "ALLOW ALL"
             WebElement allowAllButton = wait.until(
                     ExpectedConditions.elementToBeClickable(By.id("onetrust-accept-btn-handler"))
             );
-
-            // Кликаем по кнопке
             allowAllButton.click();
-
-            // Дополнительно ждём, пока баннер исчезнет
             wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("onetrust-accept-btn-handler")));
 
             System.out.println("Cookie баннер успешно закрыт.");
@@ -59,7 +54,7 @@ public class HomePage {
         }
 
 
-        // 🔍 Поиск
+
         WebElement searchInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtSearch")));
         searchInput.click();
         searchInput.clear();
